@@ -1,4 +1,6 @@
 import React from "react";
+import PostList from "../components/posts/PostList";
+
 const DUMMY_DATA = [
     {
         id: "m1",
@@ -22,11 +24,7 @@ export default function AllPostsPage() {
     return (
         <div>
             <h1>All Posts</h1>
-            <ul>
-                {DUMMY_DATA.map((post) => {
-                    return <li key={post.id}>{post.title}</li>;
-                })}
-            </ul>
+            <PostList post={DUMMY_DATA} />
         </div>
     );
 }
