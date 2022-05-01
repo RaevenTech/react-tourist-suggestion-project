@@ -3,19 +3,18 @@ import "./index.css";
 import NewPostsPage from "./pages/NewPost";
 import AllPostsPage from "./pages/AllPosts";
 import FavoritePage from "./pages/Favorite";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
     return (
-        <div>
-            <MainNavigation />
+        <Layout>
             <Routes>
                 <Route path="/" element={<AllPostsPage />} />
                 <Route path="/new-post" element={<NewPostsPage />} />
                 <Route path="/favorite" element={<FavoritePage />} />
                 <Route path="*" element={<h3>"Path not found"</h3>} />
             </Routes>
-        </div>
+        </Layout>
     );
 }
 
