@@ -6,23 +6,43 @@ export default function FormNewPost() {
     return (
         <Card>
             <form className={classes.form}>
-                <div classname={classes.control}>
+                <div className={classes.control}>
                     <label htmlFor="title">Post Title</label>
-                    <input type="text" id="title" required />
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Title..."
+                        required
+                    />
                 </div>
-                <div classname={classes.control}>
+                <div className={classes.control}>
                     <label htmlFor="image">Post Image</label>
-                    <input type="url" id="image" required />
+                    <input
+                        type="url"
+                        id="image"
+                        placeholder="Url..."
+                        required
+                    />
                 </div>
-                <div classname={classes.control}>
+                <div className={classes.control}>
                     <label htmlFor="address">Address</label>
-                    <input type="text" id="address" required />
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Address..."
+                        required
+                    />
                 </div>
-                <div classname={classes.control}>
-                    <label htmlFor="description">Descrioption</label>
-                    <textarea id="description" rows="5" required></textarea>
+                <div className={classes.control}>
+                    <label htmlFor="description">Description</label>
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Description..."
+                        required
+                    ></textarea>
                 </div>
-                <div classname={classes.actions}>
+                <div className={classes.actions}>
                     <button>Add Post</button>
                 </div>
             </form>
