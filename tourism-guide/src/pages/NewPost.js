@@ -1,5 +1,11 @@
 import React from "react";
+import FormNewPost from "../components/posts/FormNewPost";
 
 export default function NewPostPage() {
-    return <div>New Post Page</div>;
+    return (
+        <section>
+            <h1>New Post Page</h1>
+            <FormNewPost />
+        </section>
+    );
 }
