@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import PostList from "../components/posts/PostList";
 
 const DUMMY_DATA = [
@@ -21,10 +22,32 @@ const DUMMY_DATA = [
 ];
 
 export default function AllPostsPage() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadedPosts, setLoadedposts] = useState([]);
+
+    fetch(
+        "https://react-app-tourist-guide-default-rtdb.firebaseio.com/posts.json"
+    )
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            setIsLoading(false);
+            setLoadedposts(data);
+        });
+
+    if (isLoading) {
+        return (
+            <section>
+                <p> Loading... </p>
+            </section>
+        );
+    }
+
     return (
         <div>
             <h1>All Posts</h1>
-            <PostList post={DUMMY_DATA} />
+            <PostList post={loadedPosts} />
         </div>
     );
 }
