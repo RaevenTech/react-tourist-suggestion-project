@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import PostList from "../components/posts/PostList";
-import LoadingSpinner from "./spinner/LoadingSpinner";
 
 export default function AllPostsPage() {
     const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +34,7 @@ export default function AllPostsPage() {
     if (isLoading) {
         return (
             <section>
-                <LoadingSpinner />
+                <h2>Loading...</h2>
             </section>
         );
     }
