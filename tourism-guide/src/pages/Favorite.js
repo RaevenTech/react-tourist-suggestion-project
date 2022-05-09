@@ -14,9 +14,9 @@ export default function FavoritePage() {
     }
 
     return (
-        <secton>
+        <section>
             <h1> My favorites </h1>
             {content}
-        </secton>
+        </section>
     );
 }
